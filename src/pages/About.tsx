@@ -43,12 +43,9 @@ const About = ({ sidebarEnabled = true }: AboutProps) => {
           <div className="mt-8 p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
             <h3 className="text-vrising-red font-cinzel mb-3 text-lg">Marcos importantes:</h3>
             <ul className="space-y-2 pl-4 text-gray-300">
-              <li>• <strong>Julho de 2023</strong> - Fundação do servidor com 20 slots</li>
-              <li>• <strong>Setembro de 2023</strong> - Primeira expansão de conteúdo: "Sangue e Sombras"</li>
-              <li>• <strong>Dezembro de 2023</strong> - Ampliação para 100 slots devido à demanda</li>
-              <li>• <strong>Março de 2024</strong> - Segundo grande conteúdo: "Legado Ancestral"</li>
-              <li>• <strong>Maio de 2024</strong> - Lançamento do site oficial e guia do servidor</li>
-              <li>• <strong>Junho de 2024</strong> - Celebração de 1 ano com evento especial</li>
+              <li>• <strong>Julho de 2023</strong> - Lançamento do servidor</li>
+              <li>• <strong>Agosto de 2023</strong> - Criação do Discord</li>
+              <li>• <strong>Outubro de 2023</strong> - Implementação do mod RPG</li>
             </ul>
           </div>
         </div>
