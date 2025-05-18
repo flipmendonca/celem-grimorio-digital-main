@@ -240,11 +240,11 @@ const guideData: GuideData = {
           <tbody>
             <tr>
               <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam l</td>
-              <td class="border border-vrising-red/20 p-2">Exibe todos os familiares presentes na caixa atual.</td>
+              <td class="border border-vrising-red/20 p-2">Lista de familiares.</td>
             </tr>
             <tr>
-              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam v [#]</td>
-              <td class="border border-vrising-red/20 p-2">Vincula o familiar com seu personagem, chamando para ajudar no combate.</td>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam v</td>
+              <td class="border border-vrising-red/20 p-2">Vincula o familiar.</td>
             </tr>
             <tr>
               <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam dv</td>
@@ -256,11 +256,11 @@ const guideData: GuideData = {
             </tr>
             <tr>
               <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam lc</td>
-              <td class="border border-vrising-red/20 p-2">Exibe todas todas as caixas de familiares criadas para seu personagem.</td>
+              <td class="border border-vrising-red/20 p-2">Listar as caixas.</td>
             </tr>
             <tr>
-              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam ec [Caixa]</td>
-              <td class="border border-vrising-red/20 p-2">Escolhe a caixa que deve ficar ativa no momento.</td>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam ec</td>
+              <td class="border border-vrising-red/20 p-2">Escolhe uma caixa.</td>
             </tr>
             <tr>
               <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam ac [Caixa]</td>
@@ -288,7 +288,7 @@ const guideData: GuideData = {
             </tr>
             <tr>
               <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam a</td>
-              <td class="border border-vrising-red/20 p-2">Habilita/desabilita os familiares.</td>
+              <td class="border border-vrising-red/20 p-2">Chama o familiar.</td>
             </tr>
             <tr>
               <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam rf [#]</td>
@@ -474,12 +474,12 @@ const guideData: GuideData = {
             </tr>
           </thead>
           <tbody>
-            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.cl l</td><td class="border border-vrising-red/20 p-2">Exibe todas as classes disponíveis.</td></tr>
-            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.cl e [Classe]</td><td class="border border-vrising-red/20 p-2">Escolhe uma classe.</td></tr>
-            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.cl m [Classe]</td><td class="border border-vrising-red/20 p-2">Muda sua classe. (2000x Fragmento Assutador Primordial)</td></tr>
-            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.cl d [Classe]</td><td class="border border-vrising-red/20 p-2">Exibe todas as informações disponíveis para a classe escolhida.</td></tr>
-            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.cl eh ou .cl eh [Q/E/SHIFT] [1/2/3]</td><td class="border border-vrising-red/20 p-2">Para virar um conjurador e utilizar feitiços no lugar das habilidades de arma, use esse comando pela primeira vez e selecione dois feitiços novos no seu R e C, depois digite esse comando novamente e equipe e desequipe uma arma para essas habilidades aparecerem no Q e E e após isso pode escolher outras habilidades para utilizar no R e C.<br>É possível utilizar suas habilidades de classe no Q, E ou SHIFT mudando a escrita do comando.</td></tr>
-            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.cl rh</td><td class="border border-vrising-red/20 p-2">Remove os feitiços selecionados anteriormente e libera o Q e E para as habilidades de armas.</td></tr>
+            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.cl l</td><td class="border border-vrising-red/20 p-2">Lista de todas as Classes.</td></tr>
+            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.cl e</td><td class="border border-vrising-red/20 p-2">Escolhe uma classe. Exemplo: ".cl e Duelista".</td></tr>
+            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.cl m</td><td class="border border-vrising-red/20 p-2">Muda a classe.</td></tr>
+            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.cl d</td><td class="border border-vrising-red/20 p-2">Informações das classes (não habilitado).</td></tr>
+            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.cl eh ou .cl eh [Q/E/SHIFT] [1/2/3]</td><td class="border border-vrising-red/20 p-2">"Para virar um conjurador e utilizar feitiços no lugar das habilidades de arma, use esse comando pela primeira vez e selecione dois feitiços novos no seu R e C, depois digite esse comando novamente e equipe e desequipe uma arma para essas habilidades aparecerem no Q e E e após isso pode escolher outras habilidades para utilizar no R e C.<br>É possível utilizar suas habilidades de classe no Q, E ou SHIFT mudando a escrita do comando."</td></tr>
+            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.cl rh</td><td class="border border-vrising-red/20 p-2">Remove os feitiços.</td></tr>
           </tbody>
         </table>
       </div>
@@ -529,9 +529,9 @@ const guideData: GuideData = {
             </tr>
           </thead>
           <tbody>
-            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.prof l</td><td class="border border-vrising-red/20 p-2">Exibe todas as profissões disponíveis.</td></tr>
-            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.prof d [Profissão]</td><td class="border border-vrising-red/20 p-2">Exibe todas as informações do seu progresso na profissão escolhida.</td></tr>
-            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.prof e</td><td class="border border-vrising-red/20 p-2">Habilita/desabilita a exibição do recebimento de manuseio de profissão.</td></tr>
+            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.prof l</td><td class="border border-vrising-red/20 p-2">Lista de profissões.</td></tr>
+            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.prof d</td><td class="border border-vrising-red/20 p-2">Informação do progresso das profissões.</td></tr>
+            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.prof e</td><td class="border border-vrising-red/20 p-2">Habilita/desabilita exibição do manuseio da profissão.</td></tr>
           </tbody>
         </table>
         </div>
@@ -722,12 +722,12 @@ const guideData: GuideData = {
             </tr>
           </thead>
           <tbody>
-            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.ar l</td><td class="border border-vrising-red/20 p-2">Exibe todas as habilidades com armas disponíveis.</td></tr>
-            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.ar ls</td><td class="border border-vrising-red/20 p-2">Exibe todos os status disponíveis para a habilidades com armas.</td></tr>
-            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.ar es [Arma] [Status]</td><td class="border border-vrising-red/20 p-2">Escolhe os status que deseja para melhorarem conforme for progredindo na habilidades com armas escolhida.</td></tr>
-            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.ar rs</td><td class="border border-vrising-red/20 p-2">Reseta os status escolhidos para a arma atual, podem escolher novamente. (750x Fragmento Assutador Primordial)</td></tr>
-            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.ar d</td><td class="border border-vrising-red/20 p-2">Exibe todas as informações do seu progresso de habilidades com armas.</td></tr>
-            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.ar e</td><td class="border border-vrising-red/20 p-2">Habilita/desabilita a exibição do recebimento de especialização de habilidades com armas.</td></tr>
+            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.ar l</td><td class="border border-vrising-red/20 p-2">Lista de habilidades com ARMAS disponíveis.</td></tr>
+            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.ar ls</td><td class="border border-vrising-red/20 p-2">Exibe todos STATUS DISPONÍVEIS para habilidades com ARMAS.</td></tr>
+            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.ar es</td><td class="border border-vrising-red/20 p-2">Escolhe os status que deseja para por nas armas. Pode escolher até 2.</td></tr>
+            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.ar rs</td><td class="border border-vrising-red/20 p-2">Reseta os status escolhidos. (750 frag. assustador primordial)</td></tr>
+            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.ar d</td><td class="border border-vrising-red/20 p-2">Informação do progresso de habilidades com armas.</td></tr>
+            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.ar e</td><td class="border border-vrising-red/20 p-2">Habilita/desabilita exibição.</td></tr>
           </tbody>
         </table>
         </div>
@@ -804,12 +804,12 @@ const guideData: GuideData = {
             </tr>
           </thead>
           <tbody>
-            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.sg l</td><td class="border border-vrising-red/20 p-2">Exibe todos os legados de sangue disponíveis.</td></tr>
-            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.sg ls</td><td class="border border-vrising-red/20 p-2">Exibe todos os status disponíveis para o legado de sangue.</td></tr>
-            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.sg es [Sangue] [Status]</td><td class="border border-vrising-red/20 p-2">Escolhe os status que deseja para melhorarem conforme for progredindo no legado de sangue escolhido.</td></tr>
-            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.sg rs</td><td class="border border-vrising-red/20 p-2">Reseta os status escolhidos para o sangue atual, podem escolher novamente. (750x Fragmento Assutador Primordial)</td></tr>
-            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.sg d</td><td class="border border-vrising-red/20 p-2">Exibe todas as informações do seu progresso do legado de sangue atual.</td></tr>
-            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.sg e</td><td class="border border-vrising-red/20 p-2">Habilita/desabilita a exibição do recebimento de especialização de habilidades com armas.</td></tr>
+            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.sg l</td><td class="border border-vrising-red/20 p-2">Exibe os legados de sangue disponíveis.</td></tr>
+            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.sg ls</td><td class="border border-vrising-red/20 p-2">Exibe os status disponíveis para o legado.</td></tr>
+            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.sg es</td><td class="border border-vrising-red/20 p-2">Escolhe os status que deseja para melhorar o sangue (mesmo sistema que as armas).</td></tr>
+            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.sg rs</td><td class="border border-vrising-red/20 p-2">Reseta os status escolhidos para o sangue atual. (750 frag. assustador primordial)</td></tr>
+            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.sg d</td><td class="border border-vrising-red/20 p-2">Exibe as informações do seu progresso.</td></tr>
+            <tr><td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.sg e</td><td class="border border-vrising-red/20 p-2">Habilita/desabilita exibição.</td></tr>
           </tbody>
         </table>
         </div>
