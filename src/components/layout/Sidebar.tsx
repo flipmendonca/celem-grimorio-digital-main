@@ -117,7 +117,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar, mobileOpen, to
       {/* Sidebar Footer */}
       <div className="p-4 border-t border-vrising-red/20">
         <p className="text-xs text-center text-vrising-muted">
-          © 2024 Reino Sagrado de Celem
+          © 2025 Reino Sagrado de Celem
         </p>
       </div>
     </div>
@@ -211,7 +211,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar, mobileOpen, to
         {/* Sidebar Footer */}
         <div className="p-4 border-t border-vrising-red/20">
           <p className="text-xs text-center text-vrising-muted">
-            © 2024 Reino Sagrado de Celem
+            © 2025 Reino Sagrado de Celem
           </p>
         </div>
       </div>
