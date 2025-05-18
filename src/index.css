@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -89,6 +88,30 @@
   .chapter-content {
     @apply space-y-4 leading-relaxed;
   }
+  
+  /* Melhorias para tabelas em dispositivos móveis */
+  .chapter-content table {
+    @apply min-w-full border-collapse overflow-hidden;
+    width: 100%;
+  }
+  
+  .chapter-content th,
+  .chapter-content td {
+    @apply p-2 text-left align-top;
+    font-size: 0.875rem;
+  }
+  
+  @media (max-width: 640px) {
+    .chapter-content th,
+    .chapter-content td {
+      @apply p-1.5;
+      font-size: 0.75rem;
+    }
+    
+    .chapter-content .overflow-x-auto {
+      @apply -mx-2 px-2;
+    }
+  }
 }
 
 @layer utilities {
@@ -116,8 +139,17 @@
   .text-shadow-sm {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
+  
+  .mobile-scroll-indicator {
+    @apply relative after:content-[''] after:absolute after:right-0 after:top-0 after:h-full after:w-4 after:bg-gradient-to-r after:from-transparent after:to-vrising-darkcharcoal/80 after:pointer-events-none;
+  }
 }
 
 #root {
   @apply min-h-screen;
+}
+
+/* Ajustes adicionais para responsividade */
+.responsive-container {
+  @apply w-full px-2 sm:px-4 md:px-6;
 }

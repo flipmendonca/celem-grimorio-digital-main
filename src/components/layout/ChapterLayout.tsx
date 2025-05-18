@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from 'react';
 import { ArrowUp, Share2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -126,11 +125,11 @@ const ChapterLayout: React.FC<ChapterLayoutProps> = ({ title, icon, children }) 
   };
 
   return (
-    <div className="max-w-4xl mx-auto animate-fade-in">
-      <div className="mb-8 pb-4 border-b border-vrising-red/20">
+    <div className="w-full max-w-4xl mx-auto animate-fade-in px-2 sm:px-4">
+      <div className="mb-6 pb-4 border-b border-vrising-red/20">
         <div className="flex items-center gap-3 mb-2">
           <div className="text-vrising-red">{icon}</div>
-          <h1 className="text-white red-glow">{title}</h1>
+          <h1 className="text-white red-glow text-xl sm:text-2xl md:text-3xl">{title}</h1>
         </div>
         
         <div className="flex gap-2">
@@ -138,15 +137,17 @@ const ChapterLayout: React.FC<ChapterLayoutProps> = ({ title, icon, children }) 
             Guia Completo
           </Link>
           <span className="text-sm text-vrising-muted">›</span>
-          <span className="text-sm text-vrising-muted">{title}</span>
+          <span className="text-sm text-vrising-muted truncate">{title}</span>
         </div>
       </div>
 
       <div ref={contentRef} className="chapter-content mb-12">
-        {children}
+        <div className="overflow-x-auto overflow-y-hidden">
+          {children}
+        </div>
       </div>
 
-      <div className="mt-16 flex flex-col md:flex-row justify-between items-center py-4 border-t border-vrising-red/20">
+      <div className="mt-8 flex flex-col md:flex-row justify-between items-center py-4 border-t border-vrising-red/20">
         <button 
           onClick={scrollToTop} 
           className="flex items-center gap-2 text-vrising-gold hover:text-vrising-red transition-colors mb-4 md:mb-0"
