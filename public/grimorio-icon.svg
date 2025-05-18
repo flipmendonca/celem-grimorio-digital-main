@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo do livro -->
+  <rect x="96" y="64" width="320" height="384" rx="16" fill="#2C3E50"/>
+  
+  <!-- Páginas do livro -->
+  <rect x="112" y="80" width="288" height="352" rx="8" fill="#ECF0F1"/>
+  
+  <!-- Símbolo mágico -->
+  <path d="M256 144C256 144 224 176 224 256C224 336 256 368 256 368C256 368 288 336 288 256C288 176 256 144 256 144Z" fill="#E74C3C"/>
+  <circle cx="256" cy="256" r="32" fill="#E74C3C"/>
+  
+  <!-- Detalhes do livro -->
+  <rect x="96" y="64" width="320" height="32" rx="16" fill="#34495E"/>
+  <rect x="96" y="416" width="320" height="32" rx="16" fill="#34495E"/>
+</svg> 

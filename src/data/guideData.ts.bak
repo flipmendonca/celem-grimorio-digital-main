@@ -1,0 +1,1024 @@
+interface ChapterData {
+  title: string;
+  content: string;
+}
+
+interface GuideData {
+  [key: string]: ChapterData;
+}
+
+const guideData: GuideData = {
+  introducao: {
+    title: 'Introdução',
+    content: `
+      <p>Ao iniciar sua jornada, dirija-se a Vardoran, onde sua missão será conquistar aliados e desenvolver suas habilidades. A escuridão será sua aliada enquanto você se fortalece a cada conquista. Neste mundo de vampiros, o poder vem da noite, e cada local explorado revelará segredos ancestrais que ajudarão na sua ascensão.</p>
+      
+      <p>Derrote inimigos para recrutar familiares e explore mistérios ao lado de outros vampiros. No Reino Sagrado de Celem, a noite nunca acaba, e a verdadeira prova será derrotar o Drácula e assumir seu poder, transformando-se na nova liderança das terras sombrias.</p>
+      
+      <p>Antes de iniciar sua jornada no Reino Sagrado de Celem, é essencial que você esteja ciente dos plugins personalizados que oferecem uma experiência de jogo única. Esses plugins são fundamentais para que você possa aproveitar ao máximo todos os sistemas do servidor.</p>
+      
+      <p>Antes de começar, é altamente recomendado que você se familiarize com as modificações e compreenda como elas funcionam, para que sua experiência seja fluida e sem surpresas.</p>
+      
+      <p>Este é um servidor com um autêntico sistema de RPG, que altera totalmente a experiência de jogo. Aqui, seu progresso acontece ao derrotar inimigos, tornando a jornada mais longa e desafiadora, ideal para jogadores que apreciam uma construção de personagem sólida e envolvente.</p>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Como Utilizar os Plugins</h3>
+      <p>Os plugins são integrados ao jogo por meio de comandos específicos digitados no chat, que sempre começam com um ponto ( . ). Cada comando permite interagir com diferentes sistemas, como tributos, níveis, familiares, missões e muito mais.</p>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Primeiros Passos</h3>
+      <p>Para começar com o pé direito, é fundamental planejar bem a sua estratégia inicial. Escolha uma classe, um tipo de sangue e uma arma que se alinhem com seu estilo de jogo. Além disso, aproveite a oportunidade para derrotar inimigos e capturá-los, transformando-os em familiares que podem ser usados durante os combates.</p>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Comandos</h3>
+      <div class="overflow-x-auto mb-6">
+        <table class="w-full border-collapse">
+          <thead>
+            <tr class="bg-vrising-darkcharcoal">
+              <th class="border border-vrising-red/20 p-2 text-left">Comando</th>
+              <th class="border border-vrising-red/20 p-2 text-left">Descrição</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.afk</td>
+              <td class="border border-vrising-red/20 p-2">Habilita/desabilita o modo ausente.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.kit</td>
+              <td class="border border-vrising-red/20 p-2">Recebe um kit inicial de recursos.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.preparar</td>
+              <td class="border border-vrising-red/20 p-2">Avança as primeiras missões e libera a caça aos Sangue V.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.lembrar</td>
+              <td class="border border-vrising-red/20 p-2">Habilita/desabilita os lembretes de progressão.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.exp</td>
+              <td class="border border-vrising-red/20 p-2">Habilita/desabilita os números de experiência de profissão obtidos.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.base</td>
+              <td class="border border-vrising-red/20 p-2">Exibe as bases disponíveis e em decaimento separado por regiões.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.ping</td>
+              <td class="border border-vrising-red/20 p-2">Exibe o retorno de latência do servidor.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.staff</td>
+              <td class="border border-vrising-red/20 p-2">Exibe os administradores que estão online no momento.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.vip d</td>
+              <td class="border border-vrising-red/20 p-2">Exibe os status de VIP do servidor.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.tp l</td>
+              <td class="border border-vrising-red/20 p-2">Exibe os teleportes disponíveis.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.tp p [Nome]</td>
+              <td class="border border-vrising-red/20 p-2">Teleporte para o teleporte escolhido, teleportes pessoais são gratuítos. (150x Essência de Sangue)</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.tp c [Nome]</td>
+              <td class="border border-vrising-red/20 p-2">Cria um teleporte pessoal no local que o personagem está atualmente. (1 por jogador)</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.tp r [Nome]</td>
+              <td class="border border-vrising-red/20 p-2">Remove o teleporte pessoal criado.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.aura l</td>
+              <td class="border border-vrising-red/20 p-2">Exibe as auras disponíveis para aplicar no personagem.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.aura [Nome]</td>
+              <td class="border border-vrising-red/20 p-2">Aplica a aura informada no personagem e caso deseja remover só informar o nome da aura atual ativa.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.g</td>
+              <td class="border border-vrising-red/20 p-2">Guarda os itens do inventário nos baús do território que estiver, desde que tenha o mesmo item nos baús. Também pode ser utilizado apertando duas vezes no botão de Ordenar do inventário.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.pi [Nome]</td>
+              <td class="border border-vrising-red/20 p-2">Procura o item e informa em quais baús está do território que estiver.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.px [Nome] [Quantidade]</td>
+              <td class="border border-vrising-red/20 p-2">Puxa o item e a quantidade informada dos baús do território e adiciona ao seu inventário.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    `
+  },
+  missoes: {
+    title: 'Missões',
+    content: `
+      <p>Desafios diários e semanais que premiam os jogadores com moedas do jogo e experiência de nível, a recompensa escala de acordo com o nível de dificuldade.</p>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Comandos Disponíveis</h3>
+      <div class="overflow-x-auto mb-6">
+        <table class="w-full border-collapse">
+          <thead>
+            <tr class="bg-vrising-darkcharcoal">
+              <th class="border border-vrising-red/20 p-2 text-left">Comando</th>
+              <th class="border border-vrising-red/20 p-2 text-left">Descrição</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.mi e</td>
+              <td class="border border-vrising-red/20 p-2">Habilita/desabilita a exibição do progresso de missões.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.mi d [Missão]</td>
+              <td class="border border-vrising-red/20 p-2">Exibe o progresso da missão escolhida.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.mi loc [Missão]</td>
+              <td class="border border-vrising-red/20 p-2">Rastreia o alvo da missão caso for uma unidade.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.mi t [Missão]</td>
+              <td class="border border-vrising-red/20 p-2">Troca a missão escolhida. (50x Essência de Sangue para diária e 200x Essência de Sangue para semanal)</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.mi l</td>
+              <td class="border border-vrising-red/20 p-2">Exibe todos os tipos de missões disponíveis.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="p-4 border border-vrising-red/30 rounded-md bg-vrising-darkcharcoal/50 mt-6">
+        <h4 class="text-vrising-red font-cinzel text-lg mb-2">Observação</h4>
+        <p class="text-lg font-semibold">AO COMPLETAR A MISSÃO, APARECERÁ UMA MENSAGEM NO CHAT</p>
+      </div>
+    `
+  },
+  niveis: {
+    title: 'Níveis',
+    content: `
+      <p>No servidor, o tradicional sistema de níveis de equipamento foi substituído por um inovador sistema de progressão, que permite evoluir seus níveis, alcançar o prestígio e desbloquear desafios únicos e recompensas exclusivas.</p>
+      
+      <p>O nível máximo que um personagem pode atingir é 90, você vai aumentando seu nível conforme elimina unidades e Sangue V.</p>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Comandos</h3>
+      <div class="overflow-x-auto mb-6">
+        <table class="w-full border-collapse">
+          <thead>
+            <tr class="bg-vrising-darkcharcoal">
+              <th class="border border-vrising-red/20 p-2 text-left">Comando</th>
+              <th class="border border-vrising-red/20 p-2 text-left">Descrição</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.nvl e</td>
+              <td class="border border-vrising-red/20 p-2">Habilita/desabilita a exibição do recebimento de experiência de nível.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.nvl d</td>
+              <td class="border border-vrising-red/20 p-2">Exibe todas as informações do seu progresso de nível.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="p-4 border border-vrising-red/30 rounded-md bg-vrising-darkcharcoal/50 mt-6">
+        <h4 class="text-vrising-red font-cinzel text-lg mb-2">Observação</h4>
+        <p class="text-lg font-semibold">AO EVOLUIR DE NÍVEL, APARECERÁ UMA MENSAGEM NO CHAT</p>
+      </div>
+    `
+  },
+  familiares: {
+    title: 'Familiares',
+    content: `
+      <p>Capture, treine e utilize aliados únicos, desde unidades básicas até poderosos Sangues V, com evolução e customização visual, permitindo que seus familiares se tornem poderosos aliados.</p>
+      
+      <p>O nível máximo que um familiar pode atingir é 90, você vai aumentando o nível dele conforme elimina unidades e Sangue V.</p>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">% DE CHANCE DE CAPTURAR UM FAMILIAR</h3>
+      <div class="overflow-x-auto mb-6">
+        <table class="w-full border-collapse">
+          <thead>
+            <tr class="bg-vrising-darkcharcoal">
+              <th class="border border-vrising-red/20 p-2 text-left">Tipo</th>
+              <th class="border border-vrising-red/20 p-2 text-left">Chance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-vrising-red/20 p-2">Unidades</td>
+              <td class="border border-vrising-red/20 p-2">10%</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2">Sangue V</td>
+              <td class="border border-vrising-red/20 p-2">1%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="p-4 border border-vrising-red/30 rounded-md bg-vrising-darkcharcoal/50 mt-6 mb-6">
+        <h4 class="text-vrising-red font-cinzel text-lg mb-2">Observação</h4>
+        <p class="text-lg font-semibold">AO CAPTURAR UM FAMILIAR, APARECERÁ UMA MENSAGEM NO CHAT</p>
+      </div>
+
+      <h3 class="text-vrising-gold mt-6 mb-3">Comandos</h3>
+      <div class="overflow-x-auto mb-6">
+        <table class="w-full border-collapse">
+          <thead>
+            <tr class="bg-vrising-darkcharcoal">
+              <th class="border border-vrising-red/20 p-2 text-left">Comando</th>
+              <th class="border border-vrising-red/20 p-2 text-left">Descrição</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam l</td>
+              <td class="border border-vrising-red/20 p-2">Exibe todos os familiares presentes na caixa atual.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam v [#]</td>
+              <td class="border border-vrising-red/20 p-2">Vincula o familiar com seu personagem, chamando para ajudar no combate.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam dv</td>
+              <td class="border border-vrising-red/20 p-2">Desvincula o familiar do seu personagem, o retornando para caixa.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam d</td>
+              <td class="border border-vrising-red/20 p-2">Exibe todas as informações do seu progresso com o familiar.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam lc</td>
+              <td class="border border-vrising-red/20 p-2">Exibe todas todas as caixas de familiares criadas para seu personagem.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam ec [Caixa]</td>
+              <td class="border border-vrising-red/20 p-2">Escolhe a caixa que deve ficar ativa no momento.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam ac [Caixa]</td>
+              <td class="border border-vrising-red/20 p-2">Adiciona uma caixa de familiares para organizar seu familiares.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam dc [Caixa]</td>
+              <td class="border border-vrising-red/20 p-2">Deleta a caixa de familiar escolhida caso ela esteja vazia.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam rc [CaixaAtual] [NovaCaixa]</td>
+              <td class="border border-vrising-red/20 p-2">Renomeia uma caixa de familiar existente para o novo nome escolhido.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam mf [Caixa]</td>
+              <td class="border border-vrising-red/20 p-2">Move o familiar ativo para a caixa de familiar escolhida.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam pc [Familiar]</td>
+              <td class="border border-vrising-red/20 p-2">Procura o familiar escolhido em todas as suas caixas de familiares.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam r</td>
+              <td class="border border-vrising-red/20 p-2">Desvincula qualquer registro de familiar ativo do seu personagem para corrigir inconsistências.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam a</td>
+              <td class="border border-vrising-red/20 p-2">Habilita/desabilita os familiares.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam rf [#]</td>
+              <td class="border border-vrising-red/20 p-2">Remove o familiar permanentemente da caixa escolhida, essa ação não tem volta.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam ac</td>
+              <td class="border border-vrising-red/20 p-2">Habilita/desabilita o combate do familiar, ele continua com você, mas não rouba sua experiência.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam e</td>
+              <td class="border border-vrising-red/20 p-2">Habilita/desabilita a exibição controlar os familiares pelos emotes.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam le</td>
+              <td class="border border-vrising-red/20 p-2">Exibe as ações de emotes disponíveis.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam ao [Opção]</td>
+              <td class="border border-vrising-red/20 p-2">Habilita/desabilita a exibição de aura Shiny ou controle dos Emotes.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam es [Efeito]</td>
+              <td class="border border-vrising-red/20 p-2">Escolhe um efeito Shiny em um familiar que ainda não possui, apenas uma única vez e sem custo. Se o familiar já tiver um Shiny, você pode trocá-lo. (1250x Fragmento Assutador Primordial)</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.roletar</td>
+              <td class="border border-vrising-red/20 p-2">Forma de adquirir qualquer unidade e Sangue V do jogo, adicionando um familiar aleatório a sua caixa, podendo obter desde um Esqueleto até o Drácula. (5x Fragmento de Demônio)</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.autoloot</td>
+              <td class="border border-vrising-red/20 p-2">Habilita/desabilita o autoloot dos familiares.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam e</td>
+              <td class="border border-vrising-red/20 p-2">Habilita/desabilita a exibição dos itens coletados pelo autoloot dos familiares.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="text-vrising-gold mt-6 mb-3">TROCA DE FAMILIAR</h3>
+      <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30 mb-6">
+        <p class="mb-4"><strong>.fam tf [Jogador]</strong> - Envia um convite de troca do seu familiar ativo para outro jogador que vai escolher um familiar para trocar com você. (os familiares enviados e recebidos mantém o prestígio, nível e Shiny)</p>
+        <p class="mb-4">Após ambos os jogadores mandarem o convite de troca, vai ter uma etapa de confirmação de trocar de familiar que deve ser aceita com o emote "Sim" ou recusado com o emote "Não".</p>
+        <p class="mb-4">O custo para trocar é baseado no familiar que você está adquirido, levando em conta o nível, prestígio e se é Shiny ou Sangue V.</p>
+        <p>Você só pode fazer uma troca de familiar a cada 3 minutos, caso seu pedido de troca for recusado, você tem que esperar esse tempo também antes de enviar outro pedido.</p>
+      </div>
+
+      <h3 class="text-vrising-gold mt-6 mb-3">BATALHA FAMILIMON</h3>
+      <div class="overflow-x-auto mb-6">
+        <table class="w-full border-collapse">
+          <thead>
+            <tr class="bg-vrising-darkcharcoal">
+              <th class="border border-vrising-red/20 p-2 text-left">Comando</th>
+              <th class="border border-vrising-red/20 p-2 text-left">Descrição</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam g [1/2/3]</td>
+              <td class="border border-vrising-red/20 p-2">Define o familiar ativo atualmente como integrante de um dos três grupos de combate.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.fam dsf [Jogador/Cancelar]</td>
+              <td class="border border-vrising-red/20 p-2">Desafia o jogador para um combate de Familimon ou cancela a fila atual. (Necessário ter definido os três familiares para o combate)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="text-vrising-gold mt-6 mb-3">LISTA DO TIER DOS FAMILIARES SANGUE V</h3>
+      <div class="grid grid-cols-1 gap-4 mb-6">
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Tier SS</h4>
+          <p class="text-sm">[Imagens e nomes dos familiares serão inseridos posteriormente]</p>
+        </div>
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Tier S</h4>
+          <p class="text-sm">[Imagens e nomes dos familiares serão inseridos posteriormente]</p>
+        </div>
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Tier A</h4>
+          <p class="text-sm">[Imagens e nomes dos familiares serão inseridos posteriormente]</p>
+        </div>
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Tier B</h4>
+          <p class="text-sm">[Imagens e nomes dos familiares serão inseridos posteriormente]</p>
+        </div>
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Tier C</h4>
+          <p class="text-sm">[Imagens e nomes dos familiares serão inseridos posteriormente]</p>
+        </div>
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Tier D</h4>
+          <p class="text-sm">[Imagens e nomes dos familiares serão inseridos posteriormente]</p>
+        </div>
+      </div>
+    `
+  },
+  classes: {
+    title: 'Classes',
+    content: `
+      <p>O Reino Sagrado de Celem apresenta um sistema único de classes que permite que você personalize seu estilo de jogo muito além do V Rising padrão.</p>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Classes Disponíveis</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Lorde Sangue</h4>
+          <p class="text-sm">Mestre das artes sangrentas, especializado em drenar vida e manipular o sangue dos inimigos.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Sombra</h4>
+          <p class="text-sm">Assassino furtivo que se move nas trevas, especializado em ataques críticos e evasão.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Necromante</h4>
+          <p class="text-sm">Conjurador de mortos-vivos e manipulador das forças da morte.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Caçador</h4>
+          <p class="text-sm">Mestre em combate à distância e rastreamento de criaturas.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Cavaleiro Sombrio</h4>
+          <p class="text-sm">Guerreiro resiliente que utiliza armaduras pesadas e absorve grande quantidade de dano.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Alquimista</h4>
+          <p class="text-sm">Manipulador de poções e elixires que pode fortalecer aliados e enfraquecer inimigos.</p>
+        </div>
+      </div>
+      
+      <p>Há outras 9 classes para descobrir no jogo, cada uma com suas próprias árvores de talentos e estilos de jogo únicos.</p>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Sistema de Talentos</h3>
+      <p>Cada classe possui uma árvore de talentos dividida em três ramos:</p>
+      <ul class="list-disc pl-5 space-y-2 mb-6">
+        <li><strong>Ofensivo:</strong> Focado em aumentar seu dano e capacidades ofensivas</li>
+        <li><strong>Defensivo:</strong> Voltado para sobrevivência e mitigação de danos</li>
+        <li><strong>Utilitário:</strong> Oferece habilidades únicas e melhorias para recursos especiais</li>
+      </ul>
+      
+      <p>Ao subir de nível, você recebe pontos de talento que podem ser distribuídos livremente em sua árvore. A partir do nível 25, você pode escolher uma segunda classe como especialização secundária, acessando parte de seus talentos.</p>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Mudando de Classe</h3>
+      <p>Para mudar de classe, visite o Altar de Transformação na Catedral de Celem e ofereça 100 Moedas de Sangue e um Coração Primal (obtido de chefões).</p>
+      
+      <div class="p-4 border border-vrising-red/30 rounded-md bg-vrising-darkcharcoal/50 mt-6">
+        <h4 class="text-vrising-red font-cinzel text-lg mb-2">Importante!</h4>
+        <p>Ao mudar de classe, você perde todos os pontos investidos na árvore anterior! Certifique-se de estar decidido antes de fazer a troca.</p>
+      </div>
+    `
+  },
+  profissoes: {
+    title: 'Profissões',
+    content: `
+      <p>Especialização em atividades como mineração, pesca, alquimia, entre outras, com aumento de recursos coletados e benefícios adicionais conforme o progresso do jogador.</p>
+      
+      <p>O nível máximo que uma profissão pode atingir é 100, você vai aumentando o nível dela conforme realiza atividades referentes ao tipo da profissão.</p>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Tipos de Profissões e seus Benefícios</h3>
+      
+      <div class="grid grid-cols-1 gap-4 mb-6">
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Lenhador</h4>
+          <p class="text-sm">Aumenta a quantidade de madeira obtida ao cortar árvores e podendo obter sementes de árvores aleatórias.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Minerador</h4>
+          <p class="text-sm">Aumenta a quantidade de pedras e minérios coletados e podendo obter minério de ouro.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Ferreiro</h4>
+          <p class="text-sm">Aumenta a durabilidade e os benefícios das armas forjadas.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Alfaiate</h4>
+          <p class="text-sm">Aumenta a durabilidade e os benefícios das armaduras confeccionadas.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Pescador</h4>
+          <p class="text-sm">Aumenta a quantidade de peixes obtidos ao pescar.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Alquimia</h4>
+          <p class="text-sm">Aumenta a duração e os benefícios das poções.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Coletor</h4>
+          <p class="text-sm">Aumenta a quantidade de plantas e flores colhidas e podendo obter sementes de flores aleatórias.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Encantamento</h4>
+          <p class="text-sm">Aumenta a durabilidade e os benefícios dos colares encantados.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">General</h4>
+          <p class="text-sm">Aumenta a chance de obter unidades comuns e sangue v. (Exclusiva do familiar Drácula, o Rei Imortal)</p>
+        </div>
+      </div>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Comandos</h3>
+      <div class="overflow-x-auto mb-6">
+        <table class="w-full border-collapse">
+          <thead>
+            <tr class="bg-vrising-darkcharcoal">
+              <th class="border border-vrising-red/20 p-2 text-left">Comando</th>
+              <th class="border border-vrising-red/20 p-2 text-left">Descrição</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.prof l</td>
+              <td class="border border-vrising-red/20 p-2">Exibe todas as profissões disponíveis.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.prof d [Profissão]</td>
+              <td class="border border-vrising-red/20 p-2">Exibe todas as informações do seu progresso na profissão escolhida.</td>
+            </tr>
+            <tr>
+              <td class="border border-vrising-red/20 p-2 font-mono text-vrising-gold">.prof e</td>
+              <td class="border border-vrising-red/20 p-2">Habilita/desabilita a exibição do recebimento de manuseio de profissão.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="p-4 border border-vrising-red/30 rounded-md bg-vrising-darkcharcoal/50 mt-6">
+        <h4 class="text-vrising-red font-cinzel text-lg mb-2">Atenção</h4>
+        <p>Ao evoluir o manuseio de profissão, aparecerá uma mensagem no chat.</p>
+      </div>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Profissão dos Familiares</h3>
+      <p class="mb-6">Os familiares têm participação ativa nas profissões do jogo. Cada familiar poderá oferecer benefícios específicos e/ou bônus de recursos, de acordo com sua profissão.</p>
+      
+      <p>Para mais detalhes sobre os familiares e suas contribuições, consulte a tabela completa na seção de <a href="/profissoes" class="text-vrising-gold">Profissões</a>.</p>
+    `
+  },
+  habilidades: {
+    title: 'Habilidades com Armas',
+    content: `
+      <p>As habilidades com armas no Reino Sagrado de Celem são uma combinação de poder e elegância, oferecendo uma variedade de opções para cada classe e nível.</p>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Habilidades Principais</h3>
+      <p>Cada classe possui uma série de habilidades principais que podem ser usadas em combate:</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Lorde Sangue</h4>
+          <p class="text-sm">Habilidades de drenagem de vida e manipulação do sangue.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Sombra</h4>
+          <p class="text-sm">Habilidades de ataques críticos e evasão.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Necromante</h4>
+          <p class="text-sm">Habilidades de conjuração de mortos-vivos e manipulação das forças da morte.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Caçador</h4>
+          <p class="text-sm">Habilidades de combate à distância e rastreamento de criaturas.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Cavaleiro Sombrio</h4>
+          <p class="text-sm">Habilidades de resistência e absorção de dano.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Alquimista</h4>
+          <p class="text-sm">Habilidades de manipulação de poções e elixires.</p>
+        </div>
+      </div>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Habilidades Secundárias</h3>
+      <p>Cada classe também possui uma série de habilidades secundárias que podem ser usadas para complementar suas habilidades principais:</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Lorde Sangue</h4>
+          <p class="text-sm">Habilidades de cura e proteção.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Sombra</h4>
+          <p class="text-sm">Habilidades de dano e evasão.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Necromante</h4>
+          <p class="text-sm">Habilidades de controle de criaturas.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Caçador</h4>
+          <p class="text-sm">Habilidades de defesa e rastreamento.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Cavaleiro Sombrio</h4>
+          <p class="text-sm">Habilidades de defesa e resistência.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Alquimista</h4>
+          <p class="text-sm">Habilidades de recuperação e defesa.</p>
+        </div>
+      </div>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Habilidades Especiais</h3>
+      <p>Cada classe também possui uma série de habilidades especiais que podem ser usadas para desafiar inimigos fortes:</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Lorde Sangue</h4>
+          <p class="text-sm">Habilidades de drenagem de vida e manipulação do sangue.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Sombra</h4>
+          <p class="text-sm">Habilidades de ataques críticos e evasão.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Necromante</h4>
+          <p class="text-sm">Habilidades de conjuração de mortos-vivos e manipulação das forças da morte.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Caçador</h4>
+          <p class="text-sm">Habilidades de combate à distância e rastreamento de criaturas.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Cavaleiro Sombrio</h4>
+          <p class="text-sm">Habilidades de resistência e absorção de dano.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Alquimista</h4>
+          <p class="text-sm">Habilidades de manipulação de poções e elixires.</p>
+        </div>
+      </div>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Como Aprender Habilidades</h3>
+      <p>Para aprender novas habilidades, você pode:</p>
+      
+      <ul class="list-disc pl-5 space-y-2">
+        <li>Derrotar chefões que têm habilidades específicas</li>
+        <li>Completar missões que oferecem habilidades</li>
+        <li>Usar itens de habilidades no inventário</li>
+        <li>Participar de eventos que oferecem habilidades</li>
+      </ul>
+    `
+  },
+  legado: {
+    title: 'Legado de Sangue',
+    content: `
+      <p>O Legado de Sangue é um sistema que permite que os vampiros desenvolvam habilidades e atributos específicos de acordo com seu tipo de sangue.</p>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Tipos de Sangue</h3>
+      <p>Existem 5 tipos de sangue principais no Reino Sagrado de Celem:</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Sangue V</h4>
+          <p class="text-sm">Sangue mais forte e resistente, com habilidades de drenagem de vida e resistência.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Sangue C</h4>
+          <p class="text-sm">Sangue mais curto e resistente, com habilidades de drenagem de vida e resistência.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Sangue B</h4>
+          <p class="text-sm">Sangue médio e resistente, com habilidades de drenagem de vida e resistência.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Sangue A</h4>
+          <p class="text-sm">Sangue mais curto e resistente, com habilidades de drenagem de vida e resistência.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Sangue X</h4>
+          <p class="text-sm">Sangue mais curto e resistente, com habilidades de drenagem de vida e resistência.</p>
+        </div>
+      </div>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Como Aprender o Legado de Sangue</h3>
+      <p>Para aprender o Legado de Sangue, você pode:</p>
+      
+      <ul class="list-disc pl-5 space-y-2">
+        <li>Derrotar chefões que têm habilidades específicas</li>
+        <li>Completar missões que oferecem habilidades</li>
+        <li>Usar itens de habilidades no inventário</li>
+        <li>Participar de eventos que oferecem habilidades</li>
+      </ul>
+    `
+  },
+  prestigio: {
+    title: 'Prestígio',
+    content: `
+      <p>O Prestígio é um sistema que permite que os vampiros acumulem pontos de prestígio através de várias atividades, como derrotar chefões, completar missões e participar de eventos.</p>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Como Aprender o Prestígio</h3>
+      <p>Para aprender o Prestígio, você pode:</p>
+      
+      <ul class="list-disc pl-5 space-y-2">
+        <li>Derrotar chefões que têm habilidades específicas</li>
+        <li>Completar missões que oferecem habilidades</li>
+        <li>Usar itens de habilidades no inventário</li>
+        <li>Participar de eventos que oferecem habilidades</li>
+      </ul>
+    `
+  },
+  economia: {
+    title: 'Economia',
+    content: `
+      <p>A Economia no Reino Sagrado de Celem é uma ferramenta poderosa que permite que os vampiros gerenciem seus recursos e ações de forma eficaz.</p>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Tipos de Moedas</h3>
+      <p>Existem 3 tipos de moedas principais no Reino Sagrado de Celem:</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Moedas de Sangue</h4>
+          <p class="text-sm">Moedas de sangue são usadas para comprar itens, equipamentos e recursos.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Moedas de Conhecimento</h4>
+          <p class="text-sm">Moedas de conhecimento são usadas para aumentar a duração e os benefícios das poções.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Moedas de Sangue Ancestral</h4>
+          <p class="text-sm">Moedas de sangue ancestral são usadas para comprar itens raros e equipamentos.</p>
+        </div>
+      </div>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Como Aprender a Economia</h3>
+      <p>Para aprender a Economia, você pode:</p>
+      
+      <ul class="list-disc pl-5 space-y-2">
+        <li>Derrotar chefões que têm habilidades específicas</li>
+        <li>Completar missões que oferecem habilidades</li>
+        <li>Usar itens de habilidades no inventário</li>
+        <li>Participar de eventos que oferecem habilidades</li>
+      </ul>
+    `
+  },
+  tributos: {
+    title: 'Tributos',
+    content: `
+      <p>O Tributo é um sistema que permite que os vampiros se alineem com outros vampiros e ganhem benefícios em troca.</p>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Como Aprender o Tributo</h3>
+      <p>Para aprender o Tributo, você pode:</p>
+      
+      <ul class="list-disc pl-5 space-y-2">
+        <li>Derrotar chefões que têm habilidades específicas</li>
+        <li>Completar missões que oferecem habilidades</li>
+        <li>Usar itens de habilidades no inventário</li>
+        <li>Participar de eventos que oferecem habilidades</li>
+      </ul>
+    `
+  },
+  chefoes: {
+    title: 'Chefões Globais',
+    content: `
+      <p>Os Chefões Globais são inimigos muito poderosos que aparecem em eventos globais e oferecem recompensas valiosas.</p>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Como Aprender os Chefões Globais</h3>
+      <p>Para aprender os Chefões Globais, você pode:</p>
+      
+      <ul class="list-disc pl-5 space-y-2">
+        <li>Derrotar chefões que têm habilidades específicas</li>
+        <li>Completar missões que oferecem habilidades</li>
+        <li>Usar itens de habilidades no inventário</li>
+        <li>Participar de eventos que oferecem habilidades</li>
+      </ul>
+    `
+  },
+  passe: {
+    title: 'Passe de Batalha',
+    content: `
+      <p>O Passe de Batalha é um sistema que permite que os vampiros se alineem com outros vampiros e ganhem benefícios em troca.</p>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Como Aprender o Passe de Batalha</h3>
+      <p>Para aprender o Passe de Batalha, você pode:</p>
+      
+      <ul class="list-disc pl-5 space-y-2">
+        <li>Derrotar chefões que têm habilidades específicas</li>
+        <li>Completar missões que oferecem habilidades</li>
+        <li>Usar itens de habilidades no inventário</li>
+        <li>Participar de eventos que oferecem habilidades</li>
+      </ul>
+    `
+  },
+  rankings: {
+    title: 'Rankings',
+    content: `
+      <p>O sistema de Rankings do Reino Sagrado de Celem permite que os jogadores acompanhem seu progresso e comparem suas conquistas com outros vampiros do servidor.</p>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Categorias de Ranking</h3>
+      <p>Os rankings são divididos em várias categorias:</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Ranking PvP</h4>
+          <p class="text-sm">Baseado em vitórias em combates contra outros jogadores, K/D ratio e participação em eventos PvP.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Ranking PvE</h4>
+          <p class="text-sm">Contabiliza chefões derrotados, masmorras concluídas e desafios especiais superados.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Ranking de Clãs</h4>
+          <p class="text-sm">Soma das conquistas de todos os membros do clã e controle territorial.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Ranking de Profissões</h4>
+          <p class="text-sm">Especialistas em cada uma das profissões do jogo, como Alquimia, Ferraria, etc.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Ranking de Prestígio</h4>
+          <p class="text-sm">Baseado nos pontos de prestígio acumulados através de várias atividades.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30">
+          <h4 class="text-vrising-red font-cinzel mb-2">Ranking Sazonal</h4>
+          <p class="text-sm">Rankings especiais que mudam a cada temporada (3 meses), com recompensas exclusivas.</p>
+        </div>
+      </div>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Recompensas de Ranking</h3>
+      <p>Ao final de cada temporada (3 meses), os jogadores recebem recompensas com base em sua posição nos rankings:</p>
+      
+      <ul class="list-disc pl-5 space-y-2">
+        <li><strong>Top 10:</strong> Equipamentos lendários exclusivos, montarias raras, títulos únicos</li>
+        <li><strong>Top 50:</strong> Moedas de Sangue Ancestral, materiais raros, títulos especiais</li>
+        <li><strong>Top 100:</strong> Moedas de Sangue, cosméticos e outros itens valiosos</li>
+        <li><strong>Participantes:</strong> Todos os jogadores que atingirem um mínimo de pontos recebem recompensas básicas</li>
+      </ul>
+      
+      <div class="p-4 border border-vrising-gold/30 rounded-md bg-vrising-darkcharcoal/50 mt-6">
+        <h4 class="text-vrising-gold font-cinzel text-lg mb-2">Hall dos Imortais</h4>
+        <p>Jogadores que mantiverem a primeira posição em qualquer ranking por três temporadas consecutivas são eternizados no Hall dos Imortais, com uma estátua no centro de Celem e habilidades cosméticas exclusivas.</p>
+      </div>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Como Verificar Rankings</h3>
+      <p>Você pode acessar os rankings atuais de três formas:</p>
+      <ul class="list-disc pl-5 space-y-2">
+        <li>Através do comando <code>/ranking</code> no chat do jogo</li>
+        <li>Visitando o Grande Obelisco no centro da cidade principal</li>
+        <li>Pelo site oficial ou Discord do servidor, atualizados diariamente</li>
+      </ul>
+    `
+  },
+  apoie: {
+    title: 'Apoie o Reino',
+    content: `
+      <p>O Reino Sagrado de Celem é mantido com muito carinho e dedicação. Seu apoio é fundamental para continuarmos oferecendo a melhor experiência possível!</p>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Por que apoiar?</h3>
+      <p>Seu apoio permite que continuemos:</p>
+      <ul class="list-disc pl-5 space-y-2 mb-6">
+        <li>Mantendo nossos servidores de alta performance</li>
+        <li>Desenvolvendo novos conteúdos exclusivos</li>
+        <li>Realizando eventos especiais com prêmios</li>
+        <li>Expandindo nossa equipe de moderação e suporte</li>
+        <li>Criando atualizações regulares com novidades</li>
+      </ul>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Formas de Apoiar</h3>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div class="p-6 border border-vrising-gold/30 rounded-md bg-vrising-darkcharcoal/40 flex flex-col">
+          <h4 class="text-vrising-gold font-cinzel text-xl mb-4">Pacote Sangue Nobre</h4>
+          <p class="mb-4">Contribuição mensal que oferece vantagens cosméticas e de qualidade de vida.</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 flex-grow">
+            <li>Auras cosméticas exclusivas</li>
+            <li>Acesso a área VIP no Discord</li>
+            <li>Título especial no servidor</li>
+            <li>10% de bônus de experiência</li>
+            <li>Cores personalizadas no chat</li>
+          </ul>
+          <a 
+            href="https://discord.gg/reinosagrado" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="py-3 px-6 bg-vrising-red hover:bg-vrising-red/90 text-white text-center rounded-md transition-colors no-underline self-start"
+          >
+            Adquirir por R$19,90/mês
+          </a>
+        </div>
+        
+        <div class="p-6 border border-vrising-gold/30 rounded-md bg-vrising-darkcharcoal/40 flex flex-col">
+          <h4 class="text-vrising-gold font-cinzel text-xl mb-4">Pacote Sangue Ancestral</h4>
+          <p class="mb-4">Nossa maior contribuição, com todos os benefícios possíveis para verdadeiros patronos.</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 flex-grow">
+            <li>Todos os benefícios do Sangue Nobre</li>
+            <li>Asas cosméticas exclusivas</li>
+            <li>Capacidade de criar eventos personalizados</li>
+            <li>20% de bônus de experiência</li>
+            <li>Acesso antecipado às atualizações</li>
+            <li>Slot reservado no servidor (sem filas)</li>
+          </ul>
+          <a 
+            href="https://discord.gg/reinosagrado" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="py-3 px-6 bg-vrising-gold hover:bg-vrising-gold/90 text-vrising-black text-center rounded-md transition-colors no-underline font-semibold self-start"
+          >
+            Adquirir por R$39,90/mês
+          </a>
+        </div>
+      </div>
+      
+      <div class="p-6 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30 mb-8">
+        <h4 class="text-vrising-red font-cinzel text-xl mb-4">Contribuição única</h4>
+        <p class="mb-4">Prefere fazer uma contribuição pontual? Você também pode apoiar o Reino com uma doação única de qualquer valor!</p>
+        <p class="mb-6">Cada contribuição recebe recompensas proporcionais ao valor doado, como moedas de sangue, cosméticos e muito mais.</p>
+        <a 
+          href="https://discord.gg/reinosagrado" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="py-3 px-6 bg-vrising-darkcharcoal hover:bg-vrising-darkcharcoal/80 text-white text-center rounded-md transition-colors no-underline border border-vrising-red/30 inline-block"
+        >
+          Fazer uma doação
+        </a>
+      </div>
+      
+      <h3 class="text-vrising-gold mt-8 mb-3">Compromisso com a comunidade</h3>
+      <p>Todos os recursos obtidos através de apoios são reinvestidos no servidor e suas melhorias. Mensalmente, publicamos relatórios no Discord mostrando como os recursos estão sendo utilizados e quais melhorias estão sendo implementadas.</p>
+      
+      <div class="p-4 border border-vrising-gold/30 rounded-md bg-vrising-darkcharcoal/50 mt-6">
+        <h4 class="text-vrising-gold font-cinzel text-lg mb-2">Importante</h4>
+        <p>Nosso servidor segue uma filosofia rigorosa de não "pay-to-win". Todos os benefícios oferecidos são cosméticos ou de qualidade de vida, sem afetar o equilíbrio do jogo.</p>
+      </div>
+    `
+  },
+  interface: {
+    title: 'Interface',
+    content: `
+      <p>A Interface do Reino Sagrado de Celem é uma ferramenta poderosa que permite que os vampiros gerenciem seus recursos e ações de forma eficaz.</p>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Como Aprender a Interface</h3>
+      <p>Para aprender a Interface, você pode:</p>
+      
+      <ul class="list-disc pl-5 space-y-2">
+        <li>Derrotar chefões que têm habilidades específicas</li>
+        <li>Completar missões que oferecem habilidades</li>
+        <li>Usar itens de habilidades no inventário</li>
+        <li>Participar de eventos que oferecem habilidades</li>
+      </ul>
+    `
+  },
+  sobre: {
+    title: 'Sobre o Projeto',
+    content: `
+      <p>O Reino Sagrado de Celem é um projeto criado por uma equipe apaixonada de jogadores de V Rising, dedicados a oferecer uma experiência única e imersiva.</p>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Nossa História</h3>
+      <p>O projeto começou em 2023, quando um pequeno grupo de amigos decidiu criar um servidor que fosse além do jogo base, adicionando sistemas exclusivos, missões customizadas e uma narrativa rica.</p>
+      
+      <p>De um servidor com apenas 20 slots, crescemos para uma comunidade vibrante com centenas de jogadores ativos, mantendo sempre nossa filosofia de priorizar qualidade, equilíbrio e experiência imersiva.</p>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">A Equipe</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30 text-center">
+          <div class="w-20 h-20 rounded-full bg-vrising-darkgray mx-auto mb-4"></div>
+          <h4 class="text-vrising-red font-cinzel mb-2">Lorde Sanguinário</h4>
+          <p class="text-sm">Fundador e Desenvolvedor Principal<br>Responsável pela programação dos sistemas e mecânicas do servidor.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30 text-center">
+          <div class="w-20 h-20 rounded-full bg-vrising-darkgray mx-auto mb-4"></div>
+          <h4 class="text-vrising-red font-cinzel mb-2">Rainha Noturna</h4>
+          <p class="text-sm">Diretora Criativa<br>Criadora das narrativas, missões e eventos especiais do Reino de Celem.</p>
+        </div>
+        
+        <div class="p-4 border border-vrising-red/20 rounded-md bg-vrising-darkcharcoal/30 text-center">
+          <div class="w-20 h-20 rounded-full bg-vrising-darkgray mx-auto mb-4"></div>
+          <h4 class="text-vrising-red font-cinzel mb-2">Guardião das Sombras</h4>
+          <p class="text-sm">Administrador<br>Lidera a equipe de moderadores e garante o bom funcionamento do servidor.</p>
+        </div>
+      </div>
+      
+      <p>Nossa equipe também conta com moderadores dedicados e colaboradores voluntários que ajudam a manter a qualidade do servidor e o bom ambiente da comunidade.</p>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Nossos Valores</h3>
+      <ul class="list-disc pl-5 space-y-2">
+        <li><strong>Comunidade em primeiro lugar:</strong> Valorizamos o feedback dos jogadores e tomamos decisões baseadas nas necessidades da comunidade.</li>
+        <li><strong>Equilíbrio e justiça:</strong> Trabalhamos constantemente para manter o jogo equilibrado e justo para todos.</li>
+        <li><strong>Inovação constante:</strong> Buscamos sempre adicionar novos conteúdos e melhorias para manter a experiência fresca e interessante.</li>
+        <li><strong>Ambiente positivo:</strong> Promovemos um ambiente de respeito e cooperação entre os jogadores.</li>
+        <li><strong>Transparência:</strong> Mantemos a comunidade informada sobre todas as mudanças e decisões importantes.</li>
+      </ul>
+      
+      <h3 class="text-vrising-gold mt-6 mb-3">Agradecimentos</h3>
+      <p>Um agradecimento especial a todos os jogadores que fazem parte desta comunidade incrível! Vocês são a razão pela qual continuamos dedicando nosso tempo e paixão a este projeto.</p>
+      
+      <p class="mt-8 text-sm text-gray-400 text-center">© 2025 Reino Sagrado de Celem | Servidor desenvolvido pela equipe Celem | Guia web desenvolvido com ❤️ por Filipe Mendonça<br>V Rising é uma marca registrada da Stunlock Studios.</p>
+    `
+  }
+};
+
+export default guideData;
