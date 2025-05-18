@@ -89,7 +89,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, sidebarEnabled = true
           </main>
           
           <footer className="p-3 md:p-4 text-center text-xs md:text-sm text-vrising-muted bg-vrising-darkcharcoal/90 border-t border-vrising-red/20">
-            <p>© 2025 Reino Sagrado de Celem | Desenvolvido por <a href="https://discord.com/users/filipe.mendonca" target="_blank" rel="noopener noreferrer" className="text-vrising-gold hover:text-vrising-red transition-colors">Filipe Mendonça</a></p>
+            <p>© 2025 Reino Sagrado de Celem | Desenvolvido com 🩸 por <a href="https://discord.com/users/filipe.mendonca" target="_blank" rel="noopener noreferrer" className="text-vrising-gold hover:text-vrising-red transition-colors">Flip</a></p>
           </footer>
         </div>
       </div>
