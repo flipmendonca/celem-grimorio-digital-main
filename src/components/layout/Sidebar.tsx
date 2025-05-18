@@ -58,17 +58,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar, mobileOpen, to
       bg-vrising-darkcharcoal/90 backdrop-blur-md border-r border-vrising-red/20
       flex flex-col`}
     >
-      {/* Toggle button for desktop */}
-      <button
-        onClick={toggleSidebar}
-        className="absolute top-4 -right-10 bg-vrising-darkcharcoal/90 p-2 rounded-r-md border-t border-r border-b border-vrising-red/20 hidden lg:flex items-center justify-center"
-      >
-        <ChevronLeft
-          size={20}
-          className={`text-vrising-red transition-transform duration-300 ${isOpen ? '' : 'rotate-180'}`}
-        />
-      </button>
-
       {/* Sidebar Header */}
       <div className="p-4 md:p-6 flex items-center justify-center border-b border-vrising-red/20">
         <Link 

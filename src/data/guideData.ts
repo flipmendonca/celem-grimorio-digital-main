@@ -943,27 +943,27 @@ const guideData: GuideData = {
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-4 mb-8">
         <div class="flex flex-col items-center">
-          <img src="/lovable-uploads/frag_colosso.png" alt="Fragmento de Alma do Colosso" class="w-64 h-64 object-contain rounded shadow-lg border border-vrising-red/20" />
+          <img src="/lovable-uploads/frag_colosso.png" alt="Fragmento de Alma do Colosso" class="rounded shadow-lg border border-vrising-red/20 max-w-full h-auto" />
           <span class="mt-2 text-sm text-vrising-muted">Fragmento de Alma do Colosso</span>
         </div>
         <div class="flex flex-col items-center">
-          <img src="/lovable-uploads/frag_colosso2.png" alt="Fragmento de Alma do Colosso (variação)" class="w-64 h-64 object-contain rounded shadow-lg border border-vrising-red/20" />
+          <img src="/lovable-uploads/frag_colosso2.png" alt="Fragmento de Alma do Colosso (variação)" class="rounded shadow-lg border border-vrising-red/20 max-w-full h-auto" />
           <span class="mt-2 text-sm text-vrising-muted">Fragmento de Alma do Colosso (variação)</span>
       </div>
         <div class="flex flex-col items-center">
-          <img src="/lovable-uploads/frag_horror_alado.png" alt="Fragmento de Alma do Horror Alado" class="w-64 h-64 object-contain rounded shadow-lg border border-vrising-red/20" />
+          <img src="/lovable-uploads/frag_horror_alado.png" alt="Fragmento de Alma do Horror Alado" class="rounded shadow-lg border border-vrising-red/20 max-w-full h-auto" />
           <span class="mt-2 text-sm text-vrising-muted">Fragmento de Alma do Horror Alado</span>
         </div>
         <div class="flex flex-col items-center">
-          <img src="/lovable-uploads/frag_horror_alado2.png" alt="Fragmento de Alma do Horror Alado (variação)" class="w-64 h-64 object-contain rounded shadow-lg border border-vrising-red/20" />
+          <img src="/lovable-uploads/frag_horror_alado2.png" alt="Fragmento de Alma do Horror Alado (variação)" class="rounded shadow-lg border border-vrising-red/20 max-w-full h-auto" />
           <span class="mt-2 text-sm text-vrising-muted">Fragmento de Alma do Horror Alado (variação)</span>
         </div>
         <div class="flex flex-col items-center">
-          <img src="/lovable-uploads/frag_solarus.png" alt="Fragmento de Alma de Solarus" class="w-64 h-64 object-contain rounded shadow-lg border border-vrising-red/20" />
+          <img src="/lovable-uploads/frag_solarus.png" alt="Fragmento de Alma de Solarus" class="rounded shadow-lg border border-vrising-red/20 max-w-full h-auto" />
           <span class="mt-2 text-sm text-vrising-muted">Fragmento de Alma de Solarus</span>
         </div>
         <div class="flex flex-col items-center">
-          <img src="/lovable-uploads/frag_solarus2.png" alt="Fragmento de Alma de Solarus (variação)" class="w-64 h-64 object-contain rounded shadow-lg border border-vrising-red/20" />
+          <img src="/lovable-uploads/frag_solarus2.png" alt="Fragmento de Alma de Solarus (variação)" class="rounded shadow-lg border border-vrising-red/20 max-w-full h-auto" />
           <span class="mt-2 text-sm text-vrising-muted">Fragmento de Alma de Solarus (variação)</span>
         </div>
         </div>
@@ -971,27 +971,27 @@ const guideData: GuideData = {
       <h3 class="text-vrising-gold mt-6 mb-3">MOEDAS</h3>
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-8">
         <div class="flex flex-col items-center">
-          <img src="/lovable-uploads/frag_assustador_primordial.png" alt="Fragmento Assustador Primordial" class="w-40 h-40 object-contain rounded shadow-lg border border-vrising-red/20" />
+          <img src="/lovable-uploads/frag_assustador_primordial.png" alt="Fragmento Assustador Primordial" class="rounded shadow-lg border border-vrising-red/20 max-w-full h-auto" />
           <span class="mt-2 text-sm text-vrising-muted">Fragmento Assustador Primordial</span>
         </div>
         <div class="flex flex-col items-center">
-          <img src="/lovable-uploads/fibra_radiante.png" alt="Fibra Radiante" class="w-40 h-40 object-contain rounded shadow-lg border border-vrising-red/20" />
+          <img src="/lovable-uploads/fibra_radiante.png" alt="Fibra Radiante" class="rounded shadow-lg border border-vrising-red/20 max-w-full h-auto" />
           <span class="mt-2 text-sm text-vrising-muted">Fibra Radiante</span>
       </div>
         <div class="flex flex-col items-center">
-          <img src="/lovable-uploads/comp_alfaiataria_excepcional.png" alt="Componente de Alfaiataria Excepcional" class="w-40 h-40 object-contain rounded shadow-lg border border-vrising-red/20" />
+          <img src="/lovable-uploads/comp_alfaiataria_excepcional.png" alt="Componente de Alfaiataria Excepcional" class="rounded shadow-lg border border-vrising-red/20 max-w-full h-auto" />
           <span class="mt-2 text-sm text-vrising-muted">Componente de Alfaiataria Excepcional</span>
         </div>
         <div class="flex flex-col items-center">
-          <img src="/lovable-uploads/pedra_preciosa.png" alt="Pedra Preciosa" class="w-40 h-40 object-contain rounded shadow-lg border border-vrising-red/20" />
+          <img src="/lovable-uploads/pedra_preciosa.png" alt="Pedra Preciosa" class="rounded shadow-lg border border-vrising-red/20 max-w-full h-auto" />
           <span class="mt-2 text-sm text-vrising-muted">Pedra Preciosa</span>
         </div>
         <div class="flex flex-col items-center">
-          <img src="/lovable-uploads/ressonador.png" alt="Ressonador" class="w-40 h-40 object-contain rounded shadow-lg border border-vrising-red/20" />
+          <img src="/lovable-uploads/ressonador.png" alt="Ressonador" class="rounded shadow-lg border border-vrising-red/20 max-w-full h-auto" />
           <span class="mt-2 text-sm text-vrising-muted">Ressonador</span>
         </div>
         <div class="flex flex-col items-center">
-          <img src="/lovable-uploads/frag_demonio.png" alt="Fragmento de Demônio" class="w-40 h-40 object-contain rounded shadow-lg border border-vrising-red/20" />
+          <img src="/lovable-uploads/frag_demonio.png" alt="Fragmento de Demônio" class="rounded shadow-lg border border-vrising-red/20 max-w-full h-auto" />
           <span class="mt-2 text-sm text-vrising-muted">Fragmento de Demônio</span>
         </div>
         </div>
@@ -999,27 +999,27 @@ const guideData: GuideData = {
       <h3 class="text-vrising-gold mt-6 mb-3">MOEDEIROS</h3>
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-8">
         <div class="flex flex-col items-center">
-          <img src="/lovable-uploads/moedeiro1.png" alt="Moedeiro 1" class="w-64 h-64 object-contain rounded shadow-lg border border-vrising-red/20" />
+          <img src="/lovable-uploads/moedeiro1.png" alt="Moedeiro 1" class="rounded shadow-lg border border-vrising-red/20 max-w-full h-auto" />
           <span class="mt-2 text-sm text-vrising-muted">Moedeiro 1</span>
         </div>
         <div class="flex flex-col items-center">
-          <img src="/lovable-uploads/moedeiro2.png" alt="Moedeiro 2" class="w-64 h-64 object-contain rounded shadow-lg border border-vrising-red/20" />
+          <img src="/lovable-uploads/moedeiro2.png" alt="Moedeiro 2" class="rounded shadow-lg border border-vrising-red/20 max-w-full h-auto" />
           <span class="mt-2 text-sm text-vrising-muted">Moedeiro 2</span>
       </div>
         <div class="flex flex-col items-center">
-          <img src="/lovable-uploads/moedeiro3.png" alt="Moedeiro 3" class="w-64 h-64 object-contain rounded shadow-lg border border-vrising-red/20" />
+          <img src="/lovable-uploads/moedeiro3.png" alt="Moedeiro 3" class="rounded shadow-lg border border-vrising-red/20 max-w-full h-auto" />
           <span class="mt-2 text-sm text-vrising-muted">Moedeiro 3</span>
         </div>
         <div class="flex flex-col items-center">
-          <img src="/lovable-uploads/moedeiro4.png" alt="Moedeiro 4" class="w-64 h-64 object-contain rounded shadow-lg border border-vrising-red/20" />
+          <img src="/lovable-uploads/moedeiro4.png" alt="Moedeiro 4" class="rounded shadow-lg border border-vrising-red/20 max-w-full h-auto" />
           <span class="mt-2 text-sm text-vrising-muted">Moedeiro 4</span>
         </div>
         <div class="flex flex-col items-center">
-          <img src="/lovable-uploads/moedeiro5.png" alt="Moedeiro 5" class="w-64 h-64 object-contain rounded shadow-lg border border-vrising-red/20" />
+          <img src="/lovable-uploads/moedeiro5.png" alt="Moedeiro 5" class="rounded shadow-lg border border-vrising-red/20 max-w-full h-auto" />
           <span class="mt-2 text-sm text-vrising-muted">Moedeiro 5</span>
         </div>
         <div class="flex flex-col items-center">
-          <img src="/lovable-uploads/moedeiro6.png" alt="Moedeiro 6" class="w-64 h-64 object-contain rounded shadow-lg border border-vrising-red/20" />
+          <img src="/lovable-uploads/moedeiro6.png" alt="Moedeiro 6" class="rounded shadow-lg border border-vrising-red/20 max-w-full h-auto" />
           <span class="mt-2 text-sm text-vrising-muted">Moedeiro 6</span>
         </div>
         </div>
@@ -1027,35 +1027,35 @@ const guideData: GuideData = {
       <h3 class="text-vrising-gold mt-6 mb-3">COMPRADORES</h3>
       <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
         <div class="flex flex-col items-center">
-          <img src="/lovable-uploads/comprador1.png" alt="Comprador 1" class="w-64 h-64 object-contain rounded shadow-lg border border-vrising-red/20" />
+          <img src="/lovable-uploads/comprador1.png" alt="Comprador 1" class="rounded shadow-lg border border-vrising-red/20 max-w-full h-auto" />
           <span class="mt-2 text-sm text-vrising-muted">Comprador 1</span>
         </div>
         <div class="flex flex-col items-center">
-          <img src="/lovable-uploads/comprador2.png" alt="Comprador 2" class="w-64 h-64 object-contain rounded shadow-lg border border-vrising-red/20" />
+          <img src="/lovable-uploads/comprador2.png" alt="Comprador 2" class="rounded shadow-lg border border-vrising-red/20 max-w-full h-auto" />
           <span class="mt-2 text-sm text-vrising-muted">Comprador 2</span>
         </div>
         <div class="flex flex-col items-center">
-          <img src="/lovable-uploads/comprador3.png" alt="Comprador 3" class="w-64 h-64 object-contain rounded shadow-lg border border-vrising-red/20" />
+          <img src="/lovable-uploads/comprador3.png" alt="Comprador 3" class="rounded shadow-lg border border-vrising-red/20 max-w-full h-auto" />
           <span class="mt-2 text-sm text-vrising-muted">Comprador 3</span>
         </div>
         <div class="flex flex-col items-center">
-          <img src="/lovable-uploads/comprador4.png" alt="Comprador 4" class="w-64 h-64 object-contain rounded shadow-lg border border-vrising-red/20" />
+          <img src="/lovable-uploads/comprador4.png" alt="Comprador 4" class="rounded shadow-lg border border-vrising-red/20 max-w-full h-auto" />
           <span class="mt-2 text-sm text-vrising-muted">Comprador 4</span>
         </div>
         <div class="flex flex-col items-center">
-          <img src="/lovable-uploads/comprador5.png" alt="Comprador 5" class="w-64 h-64 object-contain rounded shadow-lg border border-vrising-red/20" />
+          <img src="/lovable-uploads/comprador5.png" alt="Comprador 5" class="rounded shadow-lg border border-vrising-red/20 max-w-full h-auto" />
           <span class="mt-2 text-sm text-vrising-muted">Comprador 5</span>
         </div>
         <div class="flex flex-col items-center">
-          <img src="/lovable-uploads/comprador6.png" alt="Comprador 6" class="w-64 h-64 object-contain rounded shadow-lg border border-vrising-red/20" />
+          <img src="/lovable-uploads/comprador6.png" alt="Comprador 6" class="rounded shadow-lg border border-vrising-red/20 max-w-full h-auto" />
           <span class="mt-2 text-sm text-vrising-muted">Comprador 6</span>
         </div>
         <div class="flex flex-col items-center">
-          <img src="/lovable-uploads/comprador7.png" alt="Comprador 7" class="w-64 h-64 object-contain rounded shadow-lg border border-vrising-red/20" />
+          <img src="/lovable-uploads/comprador7.png" alt="Comprador 7" class="rounded shadow-lg border border-vrising-red/20 max-w-full h-auto" />
           <span class="mt-2 text-sm text-vrising-muted">Comprador 7</span>
         </div>
         <div class="flex flex-col items-center">
-          <img src="/lovable-uploads/comprador8.png" alt="Comprador 8" class="w-64 h-64 object-contain rounded shadow-lg border border-vrising-red/20" />
+          <img src="/lovable-uploads/comprador8.png" alt="Comprador 8" class="rounded shadow-lg border border-vrising-red/20 max-w-full h-auto" />
           <span class="mt-2 text-sm text-vrising-muted">Comprador 8</span>
         </div>
       </div>
