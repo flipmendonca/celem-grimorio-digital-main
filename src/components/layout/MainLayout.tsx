@@ -52,10 +52,10 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, sidebarEnabled = true
   };
 
   return (
-    <div className="flex min-h-screen bg-vrising-darkcharcoal">
+    <div className="flex flex-col min-h-screen bg-vrising-darkcharcoal">
       {/* Mobile Header */}
       {sidebarEnabled && (
-        <div className="lg:hidden flex items-center justify-between p-3 md:p-4 bg-vrising-darkcharcoal/90 border-b border-vrising-red/20">
+        <div className="lg:hidden flex items-center justify-between p-3 md:p-4 bg-vrising-darkcharcoal/90 border-b border-vrising-red/20 sticky top-0 z-10">
           <div className="flex items-center gap-2">
             <Book className="h-5 w-5 md:h-6 md:w-6 text-vrising-red" />
             <h2 className="font-cinzel text-base md:text-lg text-white">Reino Sagrado de Celem</h2>
@@ -82,7 +82,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, sidebarEnabled = true
         )}
 
         {/* Main content */}
-        <div className="flex-1 flex flex-col overflow-hidden">
+        <div className="flex-1 flex flex-col overflow-hidden w-full">
           {sidebarEnabled && <Navbar />}
           <main className="flex-1 p-3 md:p-4 lg:p-6 xl:p-8 overflow-y-auto">
             {children}

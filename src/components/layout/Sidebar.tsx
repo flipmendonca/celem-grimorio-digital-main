@@ -56,7 +56,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar, mobileOpen, to
         isOpen ? 'translate-x-0' : '-translate-x-full'
       } lg:translate-x-0 transition-transform duration-300 ease-in-out 
       bg-vrising-darkcharcoal/90 backdrop-blur-md border-r border-vrising-red/20
-      flex flex-col`}
+      flex flex-col hidden lg:flex`}
     >
       {/* Sidebar Header */}
       <div className="p-4 md:p-6 flex items-center justify-center border-b border-vrising-red/20">
@@ -138,10 +138,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar, mobileOpen, to
 
       {/* Sidebar */}
       <div
-        className={`absolute top-0 left-0 h-full w-64 transform ${
+        className={`absolute top-0 left-0 h-full w-64 max-w-[80vw] transform ${
           mobileOpen ? 'translate-x-0' : '-translate-x-full'
         } transition-transform duration-300 ease-in-out 
-        bg-vrising-darkcharcoal/90 backdrop-blur-md border-r border-vrising-red/20
+        bg-vrising-darkcharcoal/95 backdrop-blur-md border-r border-vrising-red/20
         flex flex-col`}
       >
         {/* Close button */}
@@ -160,29 +160,29 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar, mobileOpen, to
             onClick={toggleMobileSidebar}
           >
             <div 
-              className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-cover bg-center mb-2 animate-pulse-glow"
+              className="w-16 h-16 rounded-full bg-cover bg-center mb-2 animate-pulse-glow"
               style={{ backgroundImage: "url('/lovable-uploads/6aabccb3-97c2-4dca-8ebc-43d62203d02d.png')" }}
             ></div>
-            <h1 className="text-lg md:text-xl font-bold text-white font-cinzel tracking-wider text-center">
+            <h1 className="text-lg font-bold text-white font-cinzel tracking-wider text-center">
               Reino Sagrado<br/>de Celem
             </h1>
           </Link>
         </div>
 
         {/* Main Navigation */}
-        <nav className="flex-grow p-4 pt-6 overflow-y-auto">
+        <nav className="flex-grow p-4 pt-6 overflow-y-auto scrollbar-none">
           <div className="mb-6">
-            <h2 className="font-cinzel text-vrising-gold text-lg md:text-xl mb-4">Navegação</h2>
-            <ul className="space-y-2 md:space-y-3">
+            <h2 className="font-cinzel text-vrising-gold text-lg mb-4">Navegação</h2>
+            <ul className="space-y-2">
               {menuItems.map((item) => (
                 <li key={item.title}>
                   <Link
                     to={item.path}
-                    className="no-underline flex items-center gap-2 md:gap-3 p-2 rounded-md hover:bg-vrising-red/10 text-white transition-colors"
+                    className="no-underline flex items-center gap-2 p-2 rounded-md hover:bg-vrising-red/10 text-white transition-colors"
                     onClick={toggleMobileSidebar}
                   >
-                    <item.icon className="w-4 h-4 md:w-5 md:h-5 text-vrising-red" />
-                    <span className="text-sm md:text-base">{item.title}</span>
+                    <item.icon className="w-4 h-4 text-vrising-red" />
+                    <span className="text-sm">{item.title}</span>
                   </Link>
                 </li>
               ))}
@@ -190,17 +190,17 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar, mobileOpen, to
           </div>
 
           <div>
-            <h2 className="font-cinzel text-vrising-gold text-lg md:text-xl mb-4">Capítulos do Guia</h2>
-            <ul className="space-y-1 md:space-y-2">
+            <h2 className="font-cinzel text-vrising-gold text-lg mb-4">Capítulos do Guia</h2>
+            <ul className="space-y-1">
               {guideItems.map((item) => (
                 <li key={item.title}>
                   <Link
                     to={item.path}
-                    className="no-underline flex items-center gap-2 md:gap-3 p-1.5 md:p-2 rounded-md hover:bg-vrising-red/10 text-white transition-colors"
+                    className="no-underline flex items-center gap-2 p-1.5 rounded-md hover:bg-vrising-red/10 text-white transition-colors"
                     onClick={toggleMobileSidebar}
                   >
-                    <item.icon className="w-3.5 h-3.5 md:w-4 md:h-4 text-vrising-red" />
-                    <span className="text-xs md:text-sm">{item.title}</span>
+                    <item.icon className="w-3.5 h-3.5 text-vrising-red" />
+                    <span className="text-xs">{item.title}</span>
                   </Link>
                 </li>
               ))}
