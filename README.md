@@ -1,72 +1,92 @@
-# Reino Sagrado de Celem - Grimório Digital
+# Reino Sagrado de Celem - Guia Digital
 
-Este é o guia oficial do Reino Sagrado de Celem, um servidor de V Rising com sistemas exclusivos e uma comunidade ativa.
+Este é o guia digital oficial do Reino Sagrado de Celem, um servidor de V Rising com sistemas únicos e uma comunidade ativa.
 
-## Sobre o Projeto
+## 🎮 Sobre o Projeto
 
-O Grimório Digital é uma aplicação web desenvolvida para fornecer informações detalhadas sobre todos os sistemas e mecânicas do servidor V Rising do Reino Sagrado de Celem. O projeto foi construído com tecnologias modernas para oferecer uma experiência de usuário fluida e responsiva.
+O Reino Sagrado de Celem é um servidor de V Rising que oferece uma experiência única com sistemas especiais, eventos exclusivos e uma comunidade ativa de vampiros. Este guia digital foi criado para ajudar os jogadores a entenderem todos os aspectos do servidor.
+
+## 🚀 Funcionalidades
+
+- **Guia Completo**: Informações detalhadas sobre todos os sistemas do servidor
+- **Mapa Interativo**: Visualização do mapa do jogo com pontos de interesse
+- **Central de Comandos**: Lista completa de todos os comandos disponíveis no servidor
+- **Interface Responsiva**: Design adaptável para desktop e dispositivos móveis
+- **Tema Imersivo**: Visual gótico e sombrio que combina com a temática do jogo
+
+## 📚 Seções do Guia
+
+- Introdução
+- Missões
+- Níveis
+- Familiares
+- Classes
+- Profissões
+- Habilidades com Armas
+- Legado de Sangue
+- Prestígio
+- Economia
+- Tributos
+- Chefões Globais
+- Passe de Batalha
+- Rankings
+- Interface
+
+## 🛠️ Tecnologias Utilizadas
+
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- React Router
+- Lucide Icons
+
+## 🏗️ Estrutura do Projeto
+
+```
+src/
+├── components/     # Componentes reutilizáveis
+├── data/          # Dados e configurações
+├── pages/         # Páginas da aplicação
+├── styles/        # Estilos globais
+└── utils/         # Funções utilitárias
+```
+
+## 🚀 Como Executar
+
+1. Clone o repositório
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+3. Execute o projeto:
+   ```bash
+   npm run dev
+   ```
+
+## 🤝 Contribuindo
+
+Contribuições são bem-vindas! Se você encontrar algum erro ou tiver sugestões de melhorias, por favor, abra uma issue ou envie um pull request.
+
+## 📝 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 🌟 Agradecimentos
+
+- Equipe do Reino Sagrado de Celem
+- Comunidade de jogadores
+- Contribuidores do projeto
+
+---
+
+Desenvolvido com ❤️ para a comunidade do Reino Sagrado de Celem
 
 ## Desenvolvedor
 
 Este projeto foi desenvolvido por [Filipe Mendonça](https://github.com/flipmendonca/).
 
-## Tecnologias Utilizadas
-
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
-- Shadcn UI
-- Framer Motion
-
-## Como Executar Localmente
-
-1. Clone o repositório:
-```bash
-git clone https://github.com/seu-usuario/celem-grimorio-digital.git
-cd celem-grimorio-digital
-```
-
-2. Instale as dependências:
-```bash
-npm install
-```
-
-3. Execute o servidor de desenvolvimento:
-```bash
-npm run dev
-```
-
 ## Scripts Disponíveis
 
 - `npm run dev` - Inicia o servidor de desenvolvimento
-- `npm run build` - Cria a build de produção
-- `npm run preview` - Visualiza a build de produção localmente
-- `npm run lint` - Executa o linter
-
-## Estrutura do Projeto
-
-- `/src` - Código fonte da aplicação
-  - `/components` - Componentes React reutilizáveis
-  - `/pages` - Páginas da aplicação
-  - `/hooks` - Custom hooks
-  - `/lib` - Utilitários e configurações
-  - `/data` - Dados do guia
-- `/public` - Arquivos estáticos (imagens, fontes, etc.)
-
-## Contribuindo
-
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`)
-3. Faça commit das suas alterações (`git commit -m 'Adiciona nova feature'`)
-4. Faça push para a branch (`git push origin feature/nova-feature`)
-5. Abra um Pull Request
-
-## Licença
-
-Este projeto é propriedade do Reino Sagrado de Celem. Todos os direitos reservados.
-
-## Contato
-
-- Discord: [discord.gg/celem](https://discord.gg/celem)
-- Steam: [V Rising - Reino Sagrado de Celem](https://steamcommunity.com/app/1604030)
+- `
