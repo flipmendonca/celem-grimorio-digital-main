@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
@@ -31,7 +30,7 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onEnter }) => {
       >
         <motion.div 
           className="w-32 h-32 mb-6 rounded-full bg-cover bg-center"
-          style={{ backgroundImage: "url('/lovable-uploads/6aabccb3-97c2-4dca-8ebc-43d62203d02d.png')" }}
+          style={{ backgroundImage: "url('/logo.png')" }}
           animate={{ 
             boxShadow: isHovered 
               ? '0 0 20px 5px rgba(234, 56, 76, 0.6)' 

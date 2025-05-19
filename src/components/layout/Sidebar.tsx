@@ -66,7 +66,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar, mobileOpen, to
         >
           <div 
             className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-cover bg-center mb-2 animate-plow"
-            style={{ backgroundImage: "url('/lovable-uploads/6aabccb3-97c2-4dca-8ebc-43d62203d02d.png')" }}
+            style={{ backgroundImage: "url('/logo.png')" }}
           ></div>
           <h1 className="text-lg md:text-xl font-bold text-white font-cinzel tracking-wider text-center">
             Reino Sagrado<br/>de Celem
@@ -161,7 +161,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar, mobileOpen, to
           >
             <div 
               className="w-16 h-16 rounded-full bg-cover bg-center mb-2 animate-pulse-glow"
-              style={{ backgroundImage: "url('/lovable-uploads/6aabccb3-97c2-4dca-8ebc-43d62203d02d.png')" }}
+              style={{ backgroundImage: "url('/logo.png')" }}
             ></div>
             <h1 className="text-lg font-bold text-white font-cinzel tracking-wider text-center">
               Reino Sagrado<br/>de Celem
