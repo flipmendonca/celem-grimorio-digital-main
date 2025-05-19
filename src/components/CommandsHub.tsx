@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Search } from 'lucide-react';
 import { commands, categories } from '@/data/commandsData';
 import MainLayout from '@/components/layout/MainLayout';
@@ -16,15 +16,37 @@ const CommandsHub: React.FC<CommandsHubProps> = ({ sidebarEnabled = true }) => {
     setExpandedCategory(expandedCategory === category ? null : category);
   };
 
-  const filteredCommands = commands.filter(command => 
-    command.command.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    command.description.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  // Usando useMemo para otimizar a performance da busca
+  const { filteredCommands, groupedCommands } = useMemo(() => {
+    const searchLower = searchTerm.toLowerCase().trim();
+    
+    const filtered = commands.filter(command => 
+      command.command.toLowerCase().includes(searchLower) ||
+      command.description.toLowerCase().includes(searchLower)
+    );
 
-  const groupedCommands = categories.reduce((acc, category) => {
-    acc[category] = filteredCommands.filter(cmd => cmd.category === category);
-    return acc;
-  }, {} as Record<string, typeof commands>);
+    const grouped = categories.reduce((acc, category) => {
+      const categoryCommands = filtered.filter(cmd => cmd.category === category);
+      if (categoryCommands.length > 0) {
+        acc[category] = categoryCommands;
+      }
+      return acc;
+    }, {} as Record<string, typeof commands>);
+
+    return { filteredCommands: filtered, groupedCommands: grouped };
+  }, [searchTerm]);
+
+  // Expandir automaticamente categorias que têm resultados na busca
+  React.useEffect(() => {
+    if (searchTerm) {
+      const categoriesWithResults = Object.keys(groupedCommands);
+      if (categoriesWithResults.length === 1) {
+        setExpandedCategory(categoriesWithResults[0]);
+      }
+    } else {
+      setExpandedCategory(null);
+    }
+  }, [searchTerm, groupedCommands]);
 
   return (
     <MainLayout sidebarEnabled={sidebarEnabled}>
@@ -48,14 +70,22 @@ const CommandsHub: React.FC<CommandsHubProps> = ({ sidebarEnabled = true }) => {
             </div>
           </div>
 
+          {searchTerm && filteredCommands.length === 0 && (
+            <div className="text-center py-8 text-gray-400">
+              Nenhum comando encontrado para "{searchTerm}"
+            </div>
+          )}
+
           <div className="space-y-4">
-            {categories.map((category) => (
+            {Object.entries(groupedCommands).map(([category, commands]) => (
               <div key={category} className="border border-vrising-red/20 rounded-lg overflow-hidden">
                 <button
                   onClick={() => handleCategoryChange(category)}
                   className="w-full p-4 flex items-center justify-between bg-vrising-darkcharcoal/50 hover:bg-vrising-darkcharcoal/70 transition-colors"
                 >
-                  <h3 className="text-lg font-cinzel text-white">{category}</h3>
+                  <h3 className="text-lg font-cinzel text-white">
+                    {category} <span className="text-sm text-vrising-red/70">({commands.length})</span>
+                  </h3>
                   <span className="text-vrising-red">
                     {expandedCategory === category ? '−' : '+'}
                   </span>
@@ -64,7 +94,7 @@ const CommandsHub: React.FC<CommandsHubProps> = ({ sidebarEnabled = true }) => {
                 {expandedCategory === category && (
                   <div className="p-4 bg-vrising-darkcharcoal/30">
                     <div className="space-y-3">
-                      {groupedCommands[category].map((command) => (
+                      {commands.map((command) => (
                         <div key={command.command} className="flex items-start gap-4">
                           <div className="mt-1">
                             <code className="px-2 py-1 bg-vrising-red/20 text-vrising-red rounded text-sm">
