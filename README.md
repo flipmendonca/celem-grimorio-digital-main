@@ -6,6 +6,10 @@ Este é o guia oficial do Reino Sagrado de Celem, um servidor de V Rising com si
 
 O Grimório Digital é uma aplicação web desenvolvida para fornecer informações detalhadas sobre todos os sistemas e mecânicas do servidor V Rising do Reino Sagrado de Celem. O projeto foi construído com tecnologias modernas para oferecer uma experiência de usuário fluida e responsiva.
 
+## Desenvolvedor
+
+Este projeto foi desenvolvido por [Filipe Mendonça](https://github.com/flipmendonca/).
+
 ## Tecnologias Utilizadas
 
 - React
