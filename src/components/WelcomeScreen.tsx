@@ -30,7 +30,7 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onEnter }) => {
       >
         <motion.div 
           className="w-32 h-32 mb-6 rounded-full bg-cover bg-center"
-          style={{ backgroundImage: "url('/logo.png')" }}
+          style={{ backgroundImage: "url('/images/logo.png')" }}
           animate={{ 
             boxShadow: isHovered 
               ? '0 0 20px 5px rgba(234, 56, 76, 0.6)' 

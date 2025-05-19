@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -13,6 +12,7 @@ import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import WelcomeScreen from "./components/WelcomeScreen";
 import Map from "./pages/Map";
+import CommandsHub from './components/CommandsHub';
 
 const queryClient = new QueryClient();
 
@@ -46,9 +46,10 @@ const App = () => {
             <Route path="/" element={<Index sidebarEnabled={sidebarEnabled} />} />
             <Route path="/guia" element={<GuideIndex sidebarEnabled={sidebarEnabled} />} />
             <Route path="/guia/:chapter" element={<GuideChapter sidebarEnabled={sidebarEnabled} />} />
-                        <Route path="/apoie" element={<Support sidebarEnabled={sidebarEnabled} />} />
+            <Route path="/apoie" element={<Support sidebarEnabled={sidebarEnabled} />} />
             <Route path="/sobre" element={<About sidebarEnabled={sidebarEnabled} />} />
             <Route path="/mapa" element={<Map sidebarEnabled={sidebarEnabled} />} />
+            <Route path="/comandos" element={<CommandsHub sidebarEnabled={sidebarEnabled} />} />
             <Route path="*" element={<NotFound sidebarEnabled={sidebarEnabled} />} />
           </Routes>
         </BrowserRouter>

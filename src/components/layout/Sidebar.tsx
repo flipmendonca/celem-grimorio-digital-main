@@ -12,7 +12,8 @@ import {
   ChevronLeft,
   X,
   Map,
-  Droplet
+  Droplet,
+  Command
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -26,6 +27,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar, mobileOpen, to
   const menuItems = [
     { title: 'Início', path: '/', icon: Castle },
     { title: 'Guia Completo', path: '/guia', icon: Book },
+    { title: 'Comandos', path: '/comandos', icon: Command },
     { title: 'Mapa', path: '/mapa', icon: Map },
     { title: 'Apoie o Reino', path: '/apoie', icon: Coins },
     { title: 'Sobre o Projeto', path: '/sobre', icon: Scroll },
@@ -66,7 +68,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar, mobileOpen, to
         >
           <div 
             className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-cover bg-center mb-2 animate-plow"
-            style={{ backgroundImage: "url('/logo.png')" }}
+            style={{ backgroundImage: "url('/images/logo.png')" }}
           ></div>
           <h1 className="text-lg md:text-xl font-bold text-white font-cinzel tracking-wider text-center">
             Reino Sagrado<br/>de Celem
@@ -161,7 +163,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar, mobileOpen, to
           >
             <div 
               className="w-16 h-16 rounded-full bg-cover bg-center mb-2 animate-pulse-glow"
-              style={{ backgroundImage: "url('/logo.png')" }}
+              style={{ backgroundImage: "url('/images/logo.png')" }}
             ></div>
             <h1 className="text-lg font-bold text-white font-cinzel tracking-wider text-center">
               Reino Sagrado<br/>de Celem

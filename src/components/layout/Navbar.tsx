@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
@@ -13,7 +12,9 @@ const Navbar = () => {
           <Link to="/guia" className="font-cinzel text-base md:text-lg text-white hover:text-vrising-red transition-colors">
             Guia
           </Link>
-          
+          <Link to="/comandos" className="font-cinzel text-base md:text-lg text-white hover:text-vrising-red transition-colors">
+            Comandos
+          </Link>
           <a 
             href="https://discord.gg/celem" 
             target="_blank" 

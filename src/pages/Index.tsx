@@ -32,7 +32,7 @@ const Index = ({ sidebarEnabled = true }: IndexProps) => {
           <div className="relative h-full flex flex-col items-center justify-center text-center p-6">
             <div 
               className="w-24 h-24 mb-4 bg-contain bg-center bg-no-repeat"
-              style={{ backgroundImage: "url('/logo.png')" }}
+              style={{ backgroundImage: "url('/images/logo.png')" }}
             ></div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-cinzel text-white mb-6 red-glow text-shadow-sm">
               Reino Sagrado de Celem
